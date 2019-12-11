@@ -1,0 +1,865 @@
+@charset "UTF-8";
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, main,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, main, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* end of Eric Meyer's Reset CSS */
+
+/* *********************************
+
+created by: Mark Trueman
+created on: 2019-09-17
+
+********************************* */
+/* 	colours
+    lightest blue #cfe8ef
+    light blue #c6dbf0
+    medium blue #aed1e6
+    dark blue #a0c4e2
+    darkest blue #85c7de
+*/
+
+
+/* no validation errors, warnings all apply to browser prefixs or redefinitions for browser rest or media queries*/
+
+
+/* **************************************************************************
+/
+/  Mobile Styles
+/
+/************************************************************************** */
+
+/* sets img to 100% allowing for fluid media when contained in another tag */
+
+img {
+    display:block;
+	max-width: 100%;
+	height: auto;
+}
+
+/* sets wrapper around site allowing for fluid width */
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;color: black;
+    background: url("images/gnome_applications_logo_sm.png") white no-repeat center 0.8rem;
+	background-size:10rem;
+}
+
+/* hides visual skip nav link while allowing it to still be accessible */
+.hideskipnav{
+    position:absolute;
+    left:-10000px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+}
+
+#wrapper {
+	position: relative; 
+}
+
+/* ********************************
+
+				Header
+
+********************************* */
+
+/* begin header */
+
+header {
+	padding: 5rem 0 0 0;
+}
+
+header p {
+    margin: 0.7rem 0;
+}
+
+/* styles main site logo */
+
+.hidden {
+	width: 100%; 
+	text-indent: 100%;  	/*hides h1 text */
+	white-space: nowrap;	/*hides h1 text */
+	overflow: hidden;		/*hides h1 text */
+}
+
+/* begin main nav */
+
+#mainnav ul {
+    border-top: 1px solid black;
+}
+
+#mainnav li {
+    border-bottom:1px  solid black;
+}
+
+#mainnav a {
+    display:block;
+    color:black;
+    background-color: #c6dbf0;
+    font-size: 0.65rem;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 0.43rem;
+}
+
+/* changes text and background on hover */
+
+#mainnav a:hover, header nav a:active {
+	color:white;
+    background-color: #187b9d;
+}
+/* sets text and background colour for current page */
+
+
+/* end main nav */
+/* end header */
+
+/* ***********************************
+
+				main content
+
+*********************************** */
+
+/* begin main */
+
+main {
+    position: relative;
+}
+
+main h1 {
+    color:black;
+    background-color: #85c7de;
+    font-size: 1.9rem;
+    text-align: center;
+    text-transform: uppercase;
+    padding:0.8rem 0.8rem;
+}
+
+main div p {
+    margin:0.5rem 0;
+}
+
+main div {
+    font-size: 0.7rem;
+    line-height: 1rem;
+    padding:0.5rem;
+    
+}
+
+main div ul {
+    padding:1.5rem;
+    list-style: square;
+}
+
+/* ***********************************
+
+			  demo main
+
+*********************************** */
+
+.gnome p {
+	background-color: white;
+    max-width: 250px;
+    margin: 0;
+}
+
+.container{
+	display: block;
+	text-align: center;
+	padding: 1rem 2rem;
+	background-color: white;
+}
+
+.demo main h1{
+	text-align: center;
+	font-size: 2rem;
+	padding: 0.5rem;
+}
+
+#quoteBtn{
+	display: block;
+	border: 2px solid black;
+	color: black;
+	background: white;
+	font-size: 1.1rem;
+	padding: 0.25rem 0.5rem;
+	border-radius: 7px;
+	cursor: pointer;
+	margin: 1rem auto 0 auto;
+}
+
+
+#quoteBtn:hover{
+	color:blue;
+}
+
+input[type="button"]{
+
+	border: 2px solid black;
+	overflow-wrap: break-word;
+	background: white;
+	font-size: 1.1rem;
+	padding: 0.25rem 0.5rem;
+	border-radius: 7px;
+	cursor: pointer;
+	margin: 1rem 0;
+}
+
+#authorBtn:hover{
+	color:blue;
+}
+
+blockquote {
+	position: relative;
+	width: 80%;
+	text-align: center;
+	line-height: 1.4em;
+	background-color: #fff;
+	border: 8px solid #333;
+	border-radius: 30px;
+	font-family: sans-serif;
+	padding: 20px;
+	font-size: 1rem;
+	margin: 2rem auto 0 auto;
+}
+blockquote:before,
+blockquote:after {
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;	
+}
+
+blockquote:before {
+	right: 30px;
+	bottom: -50px;
+	border: 25px solid;
+	border-color: #333 transparent transparent #333	
+}
+
+blockquote:after {
+	right: 41px;
+	bottom: -30px;
+    border: 15px solid;
+    border-top: 16px solid;
+	border-color: #fff transparent transparent #fff;
+}
+#quote:before, #quote:after {
+    content: '"';
+}
+#quoteAuthor{
+	color:black;	
+}
+
+#quoteAuthor:before{
+    content: "- ";
+
+}
+
+/* end main */
+
+/* ***********************************
+
+				aside
+
+*********************************** */
+
+/* begin aside */
+
+aside {
+    margin:0 1.7rem 0.5rem 1.7rem;
+}
+aside h1 {
+    color:black;
+    background-color: #cfe8ef;
+    font-size: 0.8rem;
+    padding:1rem 0.5rem 0.5rem 0.5rem;
+    margin-top: 1rem;
+}
+
+/* aside div p {
+    color:black;
+    background-color: #cfe8ef;
+    font-style: italic;
+    font-size: 0.7rem;
+    line-height: 0.8rem;
+    padding:0.5rem;
+} */
+
+aside p {
+    color:black;
+    background-color: white;
+    padding:0;
+}
+
+#mapid {
+    height:20rem;
+}
+#mapid div {
+    box-shadow: none;
+}
+/* end aside */
+
+/* ***********************************
+
+				footer
+
+*********************************** */
+
+/* begin footer */
+footer {
+    padding:0 0 2rem 0;
+}
+
+#social ul {
+    display:-ms-flexbox;
+    display:-webkit-box;
+    display:flex;
+    -ms-flex-flow: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-flow: row;
+    -ms-flex-pack: center;
+    -webkit-box-pack: center;
+            justify-content: center;
+    width:60%;
+    padding:0.2rem;
+    margin:0 auto;
+}  
+
+footer li {
+    padding:0.3rem;
+}
+
+footer p {
+    font-size: 0.9rem;
+    text-align: center;
+    padding: 0.5rem 0 0 0;
+}
+
+#copywrite {
+    color:black;
+    background-color: #85c7de;
+    background-image:linear-gradient(to right, #85c7de, #cfe8ef); 
+    font-size: 0.6rem;
+    padding:1rem;
+    margin: 0.5rem 0;
+}
+
+#datetime {
+    color: grey;
+    background:white;
+    font-size: 0.6rem;
+
+}
+/* end footer */
+
+/* ***********************************
+
+			Contact  Styles
+
+*********************************** */
+
+#contact {
+    text-align: center;
+    font-size: 1.3rem;
+    margin: 0 auto;
+    padding: 0 0.5rem;
+}
+#contact p {
+    text-align: left;
+    padding: 1rem 0.5rem 2rem 0.5rem;
+}
+
+#gnomeImage {
+    height: 50px;
+    width: 48px;background: url("images/animatedGnome_wht.png") white no-repeat 0px 0px;
+    margin: 0.2rem auto;
+    padding: 0;
+    
+  }
+
+  #animatedGnome > p:nth-child(2) {
+    text-align: center;
+    cursor: pointer;
+  }
+
+/* ***********************************
+
+			Gallery Styles
+
+*********************************** */
+
+
+#gallery main div {
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row;
+        flex-flow: row;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; 
+    margin:1rem;    
+}
+
+#gallery main div img {
+    margin:1rem auto 0 auto;
+    box-shadow: 0 0 10px 5px #888;
+}
+
+/* checks for browser support and if supported uses grid, otherwise falls back to flex */
+@supports (display: grid) {
+    #gallery main div {
+        display:-ms-grid;
+        display:grid;
+        grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+        grid-gap: 1rem;
+    }
+}  
+
+
+/********************************************************************************
+*
+*     media queries
+*
+*********************************************************************************/
+
+/* sets width at which mobile style changes to tablet */
+
+@media only screen and (min-width: 30rem){	
+
+    body {
+        color:black;
+        background: url("images/gnome_applications_logo_sm.png") white no-repeat left 0.8rem;
+        background-size:10rem;
+        background-position-x: 1rem;
+    }
+
+    #wrapper {
+
+        /* set up grid 12 column grid system */
+        display: -ms-grid;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        } 
+
+    
+    /* end of wrapper */	
+
+    /* ********************************
+
+                    Header
+
+    ********************************* */
+
+    /* begin header */
+
+    header {
+        -ms-grid-column-span: 12;
+        grid-column: span 12;
+    }
+
+    /* begin main nav */  
+
+    #mainnav ul {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;    /* horizontal nav bar */
+        -webkit-box-pack: left;
+            -ms-flex-pack: left;
+                justify-content: left;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    }
+
+    #mainnav li {
+        width:49.9%;      /* creates 2 columns */    
+    }
+
+    #mainnav li:nth-child(2n +1) {
+        border-right: 1px solid black;
+    }
+    /* end main nav */
+    /* end header */
+
+    /* ***********************************
+
+                    main 
+
+    *********************************** */
+
+    /* begin main */
+
+    main {
+        position: relative;
+        -ms-grid-column-span: 8;
+        grid-column: span 8;  
+    }
+
+    .about main {
+        grid-column: span 6;
+    }
+
+    main h1 {
+        text-align: left;
+        padding:0.8rem 0.8rem 0.8rem 2rem;
+    }
+
+/* demo styles */
+    .demo main{
+        -ms-grid-column-span: 12;
+        grid-column: span 12;
+    }
+
+    #outerContainer{
+		/* grid-column: span 6; */
+		display: flex;
+		flex-direction: row-reverse;
+	}
+	.gnome{
+		min-width: 125px;
+		padding: 0 0 2rem 0;
+	}
+
+	.container{
+		display: flex;
+		flex-direction: column-reverse;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-between;
+		align-content: space-between;
+		padding: 1rem 2rem 1rem 2rem;
+    }
+    
+    blockquote {
+		margin:0 auto;
+	}
+
+	blockquote:before {
+		top: 11px;
+		left: -40px;
+		border-width: 30px 40px 0 0;
+		border-style: solid;
+		border-color: transparent #333 transparent transparent; 	
+	}
+	
+	blockquote:after {
+		top: 20px;
+		left: -24px;
+		border-width:16px 25px 0 0;
+		border-style: solid;
+		border-color:  transparent #fff transparent  transparent;
+	}
+
+    /* contact styles */
+   
+    #contact {
+        padding: 0;
+    }
+
+    #contact main p {
+        font-size: 1rem;
+    }
+
+    #animatedGnome {
+        box-shadow: none;
+        margin: 12rem auto;
+        
+    }
+
+    /* gallery styles */
+    #gallery main {
+        -ms-grid-column-span: 12;
+        grid-column: span 12;
+    }
+
+    /* end main */
+
+    /* ***********************************
+        
+                        aside
+        
+    *********************************** */
+        
+    /* begin aside */
+
+    aside {
+        -ms-grid-column-span: 4;
+        grid-column: span 4;
+        margin:0 0 2rem 0;
+        border-top:3.5rem solid #85c7de;
+        padding: 1rem 1rem 0 0; 
+    } 
+        
+    aside>p {
+        -webkit-box-shadow: 0 0 10px 5px #888;
+                box-shadow: 0 0 10px 5px #888;
+    }
+
+    aside div {
+        -webkit-box-shadow: 0 0 10px 5px #888;
+                box-shadow: 0 0 10px 5px #888
+    }
+
+    .about aside {
+        grid-column: span 6;
+    }
+
+    #mapid {
+        height: 60%;
+        width: 100%;
+        margin: auto;
+    }
+
+    #about button {
+        margin: 0.3rem 0;
+        color:black;
+        /* background:#85c7de; */
+        padding:0.2rem;
+    }
+
+    #about button:hover, header nav a:active {
+        color:white;
+        background-color: #187b9d;  
+    }
+
+    /* ***********************************
+        
+                        footer
+        
+    *********************************** */
+        
+    /* begin footer */
+
+    footer {
+        position: relative;
+        -ms-grid-column-span: 12;
+        grid-column: span 12;
+        margin: 2rem 0;
+    }
+
+
+    #social ul {
+        position: absolute;
+        top:3rem;
+        left:71%;
+        width:25%;
+        
+    }
+
+    footer p:first-of-type {
+        position: absolute;
+        top:3.5rem;
+        left:58%;
+        font-size:0.8rem;
+    }
+
+    #datetime {
+        text-align: left;
+        padding: 0.6rem 0 0 1rem;
+    }
+
+    /* end footer */
+
+}    /* end media query */
+
+/* sets width at which tablet style changes to desktop */
+
+@media only screen and (min-width: 48rem){	
+
+    body {
+        background:none;
+    }
+    
+        
+    #wrapper {
+        color:black;
+        background: url("images/gnome_applications_logo_sm.png") white no-repeat left 0.8rem;
+        background-size:12rem;
+        background-position-y: 3rem;
+        width:90%;
+        max-width: 58rem;
+        margin:0 auto;
+    
+    } /* end of wrapper */	
+    
+    /* ********************************
+    
+                    Header
+    
+    ********************************* */
+    
+    /* begin header */
+    
+    header {
+        position: relative;
+        padding: 6rem 0 0 0;
+    }
+
+    /* ********************************
+    
+                    Main Nav
+    
+    ********************************* */
+
+    /* begin main nav */ 
+
+    #mainnav {
+        position: absolute;
+        top:3.85rem;
+        right:0;
+        width:70%;
+    
+    }
+
+    #mainnav ul {
+        -webkit-box-pack: end;
+            -ms-flex-pack: end;
+                justify-content: flex-end;
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+        border:none;     
+    }
+
+    #mainnav li {
+        border:none;
+    }
+
+    #mainnav li:nth-child(2n +1) {
+        border-right: none;
+    }
+
+    #mainnav a {
+        padding:1.25rem;
+    }
+    /* end main nav */
+    /* end header */
+    
+    /* ***********************************
+    
+                    main 
+    
+    *********************************** */
+    
+    /* begin main */
+    
+    main {
+        -ms-grid-column-span: 6;
+        grid-column: span 6;    
+    }
+
+    main div {
+        font-size:0.9rem;
+        margin:0.5rem;
+    }
+
+    /* contact styles */
+    #contact main div {
+        margin-top: 8rem;      
+    }
+
+    #contact main p {
+        font-size: 1rem;
+    }
+
+    /* end main */
+
+
+    /* ***********************************
+    
+                    aside
+    
+    *********************************** */
+    
+    /* begin aside */
+
+    aside {
+        -ms-grid-column-span: 6;
+        grid-column: span 6;
+    }
+
+    aside h1 {
+        font-size: 0.9rem;
+    }
+
+    aside div p {
+        font-size: 0.8rem;
+    }
+
+    /* end aside */
+
+    /* ***********************************
+    
+                    footer
+    
+    *********************************** */
+    
+    /* begin footer */
+
+    footer p:first-of-type {
+        top:3.8rem;
+        left:63%;
+    }
+
+    /* end footer */
+    
+}    /* end media query */
+
+
